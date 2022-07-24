@@ -128,7 +128,6 @@ export const clearAllMessages = () => {
 
 export const showVideoCallButtons = () => {
     showElement(document.querySelector('#personal_code_video_button'));
-    showElement(document.querySelector('#stranger_video_button'));
 }
 
 export const showRecordingPanel = () => {
@@ -167,8 +166,7 @@ export const showElement = (element) => {
 
 export const updateUIAfterHangUp = callType => {
     enableDashboard();
-    if(callType === constants.callType.VIDEO_PERSONAL_CODE
-            || callType === constants.callType.VIDEO_STRANGER) {
+    if(callType === constants.callType.VIDEO_PERSONAL_CODE) {
         hideElement(document.querySelector('#call_buttons'));
     } else {
         hideElement(document.querySelector('#finish_chat_button_container'));

@@ -189,7 +189,7 @@ const checkCallPotential = callType => {
     if(callState === constants.callState.CALL_AVAILABLE) {
         return true;
     }
-    if((callType === constants.VIDEO_PERSONAL_CODE || callType === constants.VIDEO_STRANGER)
+    if((callType === constants.VIDEO_PERSONAL_CODE)
             && callState === constants.callState.CALL_AVAILABLE_CHAT_ONLY) {
         return false;
     }
@@ -269,8 +269,7 @@ export const handleConnectedUserHangUp = () => {
 export const closePeerConnectionAndResetState = () => {
     peerConnection?.close();
     peerConnection = null;
-    if(connectedUserDetails.callType === constants.callType.VIDEO_PERSONAL_CODE
-            || connectedUserDetails.callType === constants.callType.VIDEO_STRANGER) {
+    if(connectedUserDetails.callType === constants.callType.VIDEO_PERSONAL_CODE) {
         store.getState().localStream.getAudioTracks()[0].enabled = true;
         store.getState().localStream.getVideoTracks()[0].enabled = true;
     }

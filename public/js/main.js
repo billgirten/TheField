@@ -26,12 +26,6 @@ document.querySelector('#personal_code_video_button').addEventListener('click', 
   webRTCHandler.sendPreOffer(callType, document.querySelector('#personal_code_input').value);
 });
 
-document.querySelector('#stranger_chat_button').addEventListener('click', () => {
-});
-
-document.querySelector('#stranger_video_button').addEventListener('click', () => {
-});
-
 document.querySelector('#mic_button').addEventListener('click', () => {
   const localStream = store.getState().localStream;
   const isMicEnabled = localStream.getAudioTracks()[0].enabled;
