@@ -81,7 +81,6 @@ body {
 
 .personal_code_container {
   height: 110px;
-  padding-bottom: 1rem;
   margin: 0 40px;
   background: rgba(196, 196, 196, 0.2);
   background-filter: blur(80px);
@@ -92,12 +91,13 @@ body {
 }
 
 .personal_code_title_container {
-  padding: 0 25px;
+  padding: 0 1rem;
 }
 
 .personal_code_title_paragraph {
   font-size: 1rem;
   font-weight: 500;
+  margin: 0 .25rem;
 }
 
 .personal_code_value_container {
@@ -131,6 +131,7 @@ body {
 .personal_code_connecting_paragraph {
   font-weight: 500;
   font-size: 1rem;
+  margin: 1rem 0 .25rem 0.75rem;
 }
 
 .personal_code_connecting_input_container {

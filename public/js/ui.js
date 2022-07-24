@@ -141,15 +141,11 @@ export const resetRecordingButtons = () => {
 };
 
 const enableDashboard = () => {
-    if (!document.querySelector('#dashboard_blur').classList.contains('display_none')) {
-        document.querySelector('#dashboard_blur').classList.add('display_none');
-    }
+    document.querySelector('#personal_controls_container').classList.remove('display_none');
 };
 
 const disableDashboard = () => {
-    if (document.querySelector('#dashboard_blur').classList.contains('display_none')) {
-        document.querySelector('#dashboard_blur').classList.remove('display_none');
-    }
+    document.querySelector('#personal_controls_container').classList.add('display_none');
 };
 
 export const hideElement = (element) => {
